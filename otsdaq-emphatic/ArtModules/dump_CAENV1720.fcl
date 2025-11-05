@@ -1,0 +1,52 @@
+process_name: Dump
+
+
+services: {
+  TFileService: { fileName: "processed_data_result.root" }
+}
+
+#source is a root file
+source:
+{
+  module_type: RootInput
+  maxEvents:   10        # Number of events to create
+}
+
+outputs:
+{
+ out1: {
+  module_type: FileDumperOutput
+  wantProductFullClassName:     true
+  wantProductFriendlyClassName: false
+ }
+}
+
+physics:
+{
+
+ producers:{}
+
+ filters:{}
+
+ analyzers:{
+
+   caenv1720dump: {
+     module_type: CAENV1720Dump
+     data_label: "daq:CAENV1720"
+     shift_fragment_id: 8213
+     event_to_plot: 1
+     number_of_boards: 4
+     number_of_channels: 8
+     waveform_length: 150000
+   }
+
+ }
+
+ #define the output stream, there could be more than one if using filters 
+ stream1:  [ out1 ]
+ ana: [ caenv1720dump ]
+
+ #end_paths is a keyword and contains the paths that do not modify the art::Event, 
+ #ie analyzers and output streams.  these all run simultaneously
+ end_paths:     [ ana ]  
+}
