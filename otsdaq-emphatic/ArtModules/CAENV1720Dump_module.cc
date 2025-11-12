@@ -15,8 +15,8 @@
 
 #include "canvas/Utilities/Exception.h"
 
-#include "otsdaq-acc/Overlays/CAENV1720Fragment.hh"
-#include "otsdaq-acc/Overlays/FragmentType.hh"
+#include "otsdaq-emphatic/Overlays/CAENV1720Fragment.hh"
+#include "otsdaq-emphatic/Overlays/FragmentType.hh"
 #include "artdaq-core/Data/Fragment.hh"
 
 #include "art_root_io/TFileService.h"

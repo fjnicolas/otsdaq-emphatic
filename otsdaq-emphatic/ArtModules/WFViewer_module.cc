@@ -7,8 +7,8 @@
 
 #include "artdaq-core/Data/Fragment.hh"
 
-#include "otsdaq-acc/Overlays/DataGenFragment.hh"
-#include "otsdaq-acc/Overlays/FragmentType.hh"
+#include "otsdaq-emphatic/Overlays/DataGenFragment.hh"
+#include "otsdaq-emphatic/Overlays/FragmentType.hh"
 
 #include "cetlib_except/exception.h"
 

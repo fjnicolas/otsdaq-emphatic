@@ -4,4 +4,4 @@ add_subdirectory(DataProcessorPlugins)
 
 add_subdirectory(Overlays)
 add_subdirectory(Generators)
-#add_subdirectory(ArtModules)
+add_subdirectory(ArtModules)
